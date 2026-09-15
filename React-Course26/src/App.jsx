@@ -14,7 +14,14 @@ import './App.css'
 
 const Card = ({title, rating, isCool}) => {
   return (
-    <div>
+    <div className="card" style={{
+      border: '1px solid #4b5362',
+      padding: '20px',
+      margin: '10px',
+      backgroundColor: '#31363f',
+      borderRadius: '10px',
+      minHeight: '100px',
+    }}>
       <h2>{title}</h2>
     </div>
   )
@@ -22,14 +29,11 @@ const Card = ({title, rating, isCool}) => {
 
 const App = () => {
   return (
-    <div>
-      <h2>Functional Arrow Component</h2>
-
-      <Card title="Star Wars" rating={5} isCool={true} actors={[{name: 'Actors'}]}/>
+    <div className='card-container'>
+      <Card title="Star Wars" rating={5} isCool={true}/>
       <Card title="Avatar" rating={6}/>
       <Card title="The Lion King" />
     </div>
-    
   )
 }
 
