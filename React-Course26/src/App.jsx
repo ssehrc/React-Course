@@ -17,16 +17,14 @@ const Card = ({title, rating, isCool}) => {
   return (
     <div className="card" >
       <h2>{title}</h2>
-      <button onClick={() => setHasLiked(true)}>
-        Like
+      <button onClick={() => setHasLiked(!hasLiked)}>
+        {hasLiked ? "❤️" : "🤍"}
       </button>
     </div>
   )
 }
 
 const App = () => {
-  
-
   return (
     <div className='card-container'>
       <Card title="Star Wars" rating={5} isCool={true}/>
