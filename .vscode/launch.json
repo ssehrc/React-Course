@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/sehr/Downloads/React-Course/React-Course26/src",
+      "program": "/Users/sehr/Downloads/React-Course/React-Course26/src/build/Debug/outDebug"
+    }
+  ]
+}

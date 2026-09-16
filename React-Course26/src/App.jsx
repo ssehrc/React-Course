@@ -13,7 +13,11 @@ import './App.css'
 }*/
 
 const Card = ({title, rating, isCool}) => {
+  const [count, setCount] = useState(0);
   const [hasLiked, setHasLiked] = useState(false);
+  useEffect(() => {
+    console.log(`${title} has been liked: ${hasLiked}`);
+  });
   return (
     <div className="card" >
       <h2>{title}</h2>
