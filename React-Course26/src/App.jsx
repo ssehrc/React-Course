@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -17,10 +17,14 @@ const Card = ({title, rating, isCool}) => {
   const [hasLiked, setHasLiked] = useState(false);
   useEffect(() => {
     console.log(`${title} has been liked: ${hasLiked}`);
-  });
+  }, [hasLiked]);
+
+  
+
   return (
-    <div className="card" >
-      <h2>{title}</h2>
+    <div className="card" onClick={() => setCount(count + 1)}>
+      <h2>{title} <br /> {count || null} </h2>
+
       <button onClick={() => setHasLiked(!hasLiked)}>
         {hasLiked ? "❤️" : "🤍"}
       </button>
