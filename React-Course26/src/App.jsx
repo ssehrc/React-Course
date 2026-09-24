@@ -59,15 +59,15 @@ const App = () => {
           <h1 className='text-white'>{searchTerm}</h1>
 
           <section className="all-movies">
-            <h2>All Movies</h2>
+            <h2 className="mt-[40px]">All Movies</h2>
             {isLoading ? (
-              <p className="text-white">Loading...</p>
+              <Spinner />
             ) : errorMessage ? (
               <p className="text-red-500">{errorMessage}</p>
             ) : (
               <ul>
                 {movieList.map((movie) =>(
-                  <p className="text-white">{movie.title}</p>
+                  <p key={movie.id} className="text-white">{movie.title}</p>
                 ))}
               </ul>
             )}
