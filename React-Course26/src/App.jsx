@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Search from './components/Search.jsx'
-import MovieCard from './components/MovieCard.jsx';
+import MovieCard from './components/MovieCard.jsx'
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 
