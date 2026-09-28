@@ -24,7 +24,7 @@ const App = () => {
   const [debouncedSearchTerm, setdebouncedSearchTerm] = useState('');
 
   //Debounce the search term to prevent making too many API requests by waiting for the user to stop typing for 500ms
-  useDebounce(() => setdebouncedSearchTerm(searchTerm), 500, [searchTerm]); //npm i react-use
+  useDebounce(() => setdebouncedSearchTerm(searchTerm), 1000, [searchTerm]); //npm i react-use
 
   const fetchMovies = async (query = '') => {
     setIsLoading(true);
